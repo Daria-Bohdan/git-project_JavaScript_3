@@ -1,0 +1,85 @@
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+}
+
+.carousel-container>img {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    animation: 1s fadeOut;
+}
+
+img.active {
+    left: 0;
+    visibility: visible;
+    animation: 1s fadeIn;
+}
+
+.left, .right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 80px;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+}
+
+.btn-slide {
+	font-size: 72px;
+	font-weight: 800;
+	color: white;
+	cursor: pointer; 
+}
+
+@keyframes fadeIn {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        visibility: visible;
+        left: 0px;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 1000px;
+        visibility: hidden;
+    }
+} 
+
+/*  САМА СДЕЛАЛА */
+
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot:hover {
+  background-color: #717171;
+}
+
+    
+
